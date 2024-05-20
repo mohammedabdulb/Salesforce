@@ -1,9 +1,8 @@
 import { api,track, LightningElement } from 'lwc';
-import getInventoryDetails from '@salesforce/apex/ScreenFlowController.getInventoryDetails';
+import getDetails from '@salesforce/apex/ScreenFlowController.getDetails';
 
 export default class ScreenFlowReadOnlyFields extends LightningElement {
     @api oppId;
-    propertyName;
     accountName;
     error;
     showData = false;
@@ -17,18 +16,15 @@ export default class ScreenFlowReadOnlyFields extends LightningElement {
     }
     handleLoad() {
         this.showData = true;
-            getInventoryDetails({oppId:this.oppId})
+            getDetails({oppId:this.oppId})
         .then(result => {
-            if(result.projectname){
-                this.propertyName =  result.projectname;
-            }
             if(result.accountName){
                 this.accountName  =  result.accountName;
             }
             this.error = undefined;
         })
         .catch(error => {
-            this.propertyName = undefined;
+            this.accountName = undefined;
             this.error = error;
 
         });
