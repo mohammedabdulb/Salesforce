@@ -6,14 +6,17 @@ Searching the in01 or in02 from the given string.
 3) LEFT(keep above string here ,5)  --------------> in this by keeping the above string , we are triming till first 5 digits of the String.
 
 **JAvascript Object Notation** :- 
- @track postDatedChequeObjValidation={  
-        checkNumberFlag:true, // Bolean
-        CheckNumList: [], // Array or List
-        customerBankFlag:true,
-        customerBankList: [],
-        remittanceBankFlag:true,
-        remittanceBankList: []
+
+ @track postDatedChequeObjValidation={   
+     checkNumberFlag:true, // Bolean
+     CheckNumList: [], // Array or List 
+     customerBankFlag:true,
+     customerBankList: [],
+     remittanceBankFlag:true,
+     remittanceBankList: []
     };   
+
+
 **Null Check in LWC     ** 
 First it should be defined then this value should not be null with respect to obj and shouldn't be empty String. 
 if(eachsPDCItem.Name_On_Cheque__c && (eachsPDCItem.Name_On_Cheque__c !== null || eachsPDCItem.Name_On_Cheque__c !== ''))
