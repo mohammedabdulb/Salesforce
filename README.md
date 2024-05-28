@@ -19,5 +19,5 @@ Searching the in01 or in02 from the given string.
 
 **Null Check in LWC     ** 
 First it should be defined then this value should not be null with respect to obj and shouldn't be empty String. 
-if(eachsPDCItem.Name_On_Cheque__c && (eachsPDCItem.Name_On_Cheque__c !== null || eachsPDCItem.Name_On_Cheque__c !== ''))
+if(eachsPDCItem.Name_On_Cheque__c && (eachsPDCItem.Name_On_Cheque__c !== null && eachsPDCItem.Name_On_Cheque__c !== ''))
 
