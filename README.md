@@ -17,7 +17,20 @@ Searching the in01 or in02 from the given string.
     };   
 
 
-**Null Check in LWC     ** 
+**Null Check in LWC** 
 First it should be defined then this value should not be null with respect to obj and shouldn't be empty String. 
 if(eachsPDCItem.Name_On_Cheque__c && (eachsPDCItem.Name_On_Cheque__c !== null && eachsPDCItem.Name_On_Cheque__c !== ''))
 
+
+**Async Await Concept**:-
+async function showServiceCost(){
+   let User = await getUser(100);
+   let services = await getServices(user);
+   let cost = await getServiceCost(services)
+   console.log(`The Service cost is ${cost}`);
+}
+
+getUser(100)
+.then(getServices)
+.then(getServiceCost)
+.then(result=>console.log(result))
