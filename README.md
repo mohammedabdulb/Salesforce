@@ -5,6 +5,10 @@ Searching the in01 or in02 from the given string.
 2) RIGHT(A1,LEN(A1)-SEARCH("in",A1)+1) -------------> this will return whole string after that position.
 3) LEFT(keep above string here ,5)  --------------> in this by keeping the above string , we are triming till first 5 digits of the String.
 
+**Apex Output to Flow**
+****Note :- For using apex in the flows we hvae to use List of List Every time.**
+List<List<String>> this should be return of the apex Class
+
 **JAvascript Object Notation** :- 
 
  @track postDatedChequeObjValidation={   
