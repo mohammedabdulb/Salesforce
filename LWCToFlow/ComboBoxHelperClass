@@ -1,0 +1,19 @@
+/*
+Created By :- Abdul Basith
+This is helper for the flow : xyz Flow
+*/
+public without sharing class GeneratePDCAcknowledgementFlowHelper {
+    @AuraEnabled
+    public Static  List<String> getUniquePDCsAcknowledgementNumbers(List<String> oppId){
+        List<String> ListFlowOutput = new List<String>();
+        for(AggregateResult ag : [Select   Name 
+                        FROM XYZ 
+                        WHERE Opportunity__c =:oppId group by Name ]){
+            if (String.isNotBlank((String)ag.get('Name'))){               
+                String SingleFlowOutput = (String) ag.get('Name');
+                ListFlowOutput.add(SingleFlowOutput);
+            }
+        }
+        return ListFlowOutput;
+    }
+}
