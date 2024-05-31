@@ -1,0 +1,16 @@
+LWCToFlow:- This LWC Component Contain changes related to showing combo box means picklist dropdown via html after calling apex class.
+**UseCase** :- 
+Also this LWC was embeded in the flow and getting record id from the flow then returning apex data to the lwc component on load.
+This component read inputs from the flow and send data also to the flow but this data wont be shown on same screen because screens are not reactive.
+LWC data retruning to the flow can be shown by adding second screen.
+Issue faced :- Showing picklist drowpdown , fixed this issue by using below line of codes.
+           var optionList = [];
+            result.forEach(element => {
+                    const option = {
+                        label: element,
+                        value: element
+                    };
+                optionList.push(option);
+            });
+            this.options = optionList; // (Note :- this.options is the input parament which was defined in the js at top.
+            console.log('~~~this.options ~~~~',this.options);
