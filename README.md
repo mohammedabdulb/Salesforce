@@ -34,7 +34,16 @@ async function showServiceCost(){
    console.log(`The Service cost is ${cost}`);
 }
 
+example :- 
 getUser(100)
 .then(getServices)
 .then(getServiceCost)
 .then(result=>console.log(result))
+
+
+
+
+Unique ID Generation Example in Salesforce:-
+[3:05 PM] Abhimanyu Raut
+https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_class_System_UUID.htm
+<img width="359" alt="image" src="https://github.com/mohammedabdulb/Salesforce/assets/71633830/8f9c6739-09e6-4a69-80cd-edf31349d495">
