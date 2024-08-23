@@ -1,3 +1,11 @@
+// By default class logic gets executed in system context if with sharing key word is not mentioned.
+// with sharing , without sharing key word enforces the logic execution in the respective context.
+// Trigger runs in system mode until class contains without sharing.
+// future method runs in the context of the class with which it got invoked.
+// if class is specified without sharing it will run in without sharing mode.
+// The batch class runs in the context of the user who scheduled it.
+
+
 ![image](https://github.com/mohammedabdulb/Salesforce/assets/71633830/cb3b5ac3-c391-4d5a-bca4-585825bea3ad)Read this file
 Important Frequently Used Code.
 Searching the in01 or in02 from the given string.
